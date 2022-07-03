@@ -1,0 +1,144 @@
+import { useEffect, useState } from "react";
+import axios from "axios";
+
+import Greet from "./components/Greet";
+import Heading from "./components/Heading";
+import Person from "./components/Person";
+import PersonList from "./components/PersonList";
+import Status from "./components/Status";
+import Oscar from "./components/Oscar";
+import Button from "./components/Button";
+import Input from "./components/Input";
+import Container from "./components/Container";
+import FetchTodos from "./FetchTodos";
+import Todos from './Todos';
+import LoggedIn from "./components/state/LoggedIn";
+import User from "./components/state/User";
+
+// https://www.youtube.com/watch?v=rbtTb9hLYS8&list=PLC3y8-rFHvwi1AXijGTKM0BKtHzVC-LSK&index=14 14
+const App = () => {
+  // const personName = {
+  //   first: "Bruce",
+  //   last: "Wayne",
+  // };
+  // const nameList = [
+  //   {
+  //     first: "Bruce",
+  //     last: "Wayne",
+  //   },
+  //   {
+  //     first: "Clark",
+  //     last: "Kent",
+  //   },
+  //   {
+  //     first: "Princess",
+  //     last: "Diana",
+  //   },
+  // ];
+  // const [value, setValue] = useState<string>("");
+
+  // const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  //   setValue(e.target.value);
+  // };
+
+  const { state, clickFetch } = FetchTodos();
+
+  return (
+    <div>
+      {/* <Greet name={"Hasan"}  isLoggedIn={true} /> */} 
+      {/* <Person name={personName} onClick={() => console.log("asd")} />      
+      <PersonList names={nameList} /> */}
+      {/* <Status status="loading" />
+      <Heading>adsasd</Heading>
+      <Oscar> 
+        <Heading>Oscar Goes to Leonardo Dicpario!</Heading>
+      </Oscar> */}
+      {/* <Button
+        handleClick={(e: React.MouseEvent<HTMLButtonElement>, id: number) =>
+          console.log("Button Clicked.", e, id)
+        }
+      /> */}
+      {/* <Input value={value} handleChange={handleChange} /> */}
+      {/* <Container styles={{ border: "1px solid black", padding: "1rem" }} /> */}
+      {/* <button onClick={clickFetch}>Fetch</button>
+      <Todos data={state} /> */}
+      {/* <LoggedIn/> */}
+      {/* <User/> */}
+      
+    </div>
+  );
+};
+
+export default App;
+import { useEffect, useState } from "react";
+import axios from "axios";
+
+import Greet from "./components/Greet";
+import Heading from "./components/Heading";
+import Person from "./components/Person";
+import PersonList from "./components/PersonList";
+import Status from "./components/Status";
+import Oscar from "./components/Oscar";
+import Button from "./components/Button";
+import Input from "./components/Input";
+import Container from "./components/Container";
+import FetchTodos from "./FetchTodos";
+import Todos from './Todos';
+import LoggedIn from "./components/state/LoggedIn";
+import User from "./components/state/User";
+
+// https://www.youtube.com/watch?v=rbtTb9hLYS8&list=PLC3y8-rFHvwi1AXijGTKM0BKtHzVC-LSK&index=14 14
+const App = () => {
+  // const personName = {
+  //   first: "Bruce",
+  //   last: "Wayne",
+  // };
+  // const nameList = [
+  //   {
+  //     first: "Bruce",
+  //     last: "Wayne",
+  //   },
+  //   {
+  //     first: "Clark",
+  //     last: "Kent",
+  //   },
+  //   {
+  //     first: "Princess",
+  //     last: "Diana",
+  //   },
+  // ];
+  // const [value, setValue] = useState<string>("");
+
+  // const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  //   setValue(e.target.value);
+  // };
+
+  const { state, clickFetch } = FetchTodos();
+
+  return (
+    <div>
+      {/* <Greet name={"Hasan"}  isLoggedIn={true} /> */} 
+      {/* <Person name={personName} onClick={() => console.log("asd")} />      
+      <PersonList names={nameList} /> */}
+      {/* <Status status="loading" />
+      <Heading>adsasd</Heading>
+      <Oscar> 
+        <Heading>Oscar Goes to Leonardo Dicpario!</Heading>
+      </Oscar> */}
+      {/* <Button
+        handleClick={(e: React.MouseEvent<HTMLButtonElement>, id: number) =>
+          console.log("Button Clicked.", e, id)
+        }
+      /> */}
+      {/* <Input value={value} handleChange={handleChange} /> */}
+      {/* <Container styles={{ border: "1px solid black", padding: "1rem" }} /> */}
+      {/* <button onClick={clickFetch}>Fetch</button>
+      <Todos data={state} /> */}
+      {/* <LoggedIn/> */}
+      {/* <User/> */}
+      
+    </div>
+  );
+};
+
+export default App;

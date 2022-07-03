@@ -1,0 +1,15 @@
+.scroll-bar-test{
+    overflow: hidden !important;
+    overflow-y: auto !important;
+}
+
+.scroll-bar-test::-webkit-scrollbar {
+    background: transparent !important;
+    width: 8px !important;
+}
+
+.scroll-bar-test::-webkit-scrollbar-thumb {
+    background: rgb(146, 146, 146) !important;
+    border-radius: 6px !important;
+
+}

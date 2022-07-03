@@ -1,0 +1,62 @@
+// https://www.youtube.com/watch?v=9726Yq3Scjk&list=PLC3y8-rFHvwi1AXijGTKM0BKtHzVC-LSK&index=15 15
+import { useEffect, useState } from 'react';
+
+const App = () => {
+  const [panorama, setPanorama] = useState(new Image());
+
+  const urls: { LOW: string; HIGH: string; } = {
+    LOW: "https://elta.b-cdn.net/panorama-P210-ZKf-1653307685542.jpg",
+    HIGH: "https://elta.b-cdn.net/panorama-ZY4YYJmp-1653308073242.jpg"
+  }
+
+
+  const urlsTwo: { LOW: string; HIGH: string; } = {
+    LOW: "https://elta.b-cdn.net/panorama-KnmHY1CK-1653307685463.jpg",
+    HIGH: "https://elta.b-cdn.net/panorama-jYG5-vkn-1653308036618.jpg"
+  }
+
+  const loadImage = (url: string) => {
+    const newImage = new Image();
+    newImage.src = url;
+    return newImage;
+  };
+
+  const getFirstImage = (urls: { LOW: string; HIGH: string; }): void => {
+    const lowImage = loadImage(`${urls.LOW}`);
+    const highImage = loadImage(`${urls.HIGH}`);
+
+    lowImage.onload = () => setPanorama(lowImage);
+    highImage.onload = () => setPanorama(highImage);
+
+    if (highImage.complete) {
+      setPanorama(highImage);
+    }
+  };
+
+  useEffect(() => {
+    getFirstImage(urls);
+  }, [])
+
+  // then use it like this
+
+  return (
+    <div>
+
+      <button onClick={() => getFirstImage(urlsTwo)}>Resim 1</button>
+      <button onClick={() => getFirstImage(urls)}>Resim 2</button>
+      <img
+        src={panorama.src}
+        alt={"imagetest"}
+        width="1874px"
+        height={"937px"}
+      />
+      {
+        /*
+              
+        */
+      }
+    </div>
+  )
+}
+
+export default App
