@@ -13,3 +13,22 @@ export const createActionSucces = (data: TodoState) => {
         payload: data
     }
 }
+
+export const removeActionSuccess = (data: TodoState) => {
+    return {
+        type: "remove",
+        payload: data
+    }
+}
+
+
+export const updateActionSuccess = (id: number, data: TodoState) => {
+    return {
+        type: "update",
+        payload: {
+            id,
+            data
+        }
+    }
+}
+
