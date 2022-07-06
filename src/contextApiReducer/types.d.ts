@@ -7,7 +7,7 @@ export interface TodoState {
 
 export interface TodoAction {
     type: string;
-    payload: TodoState[] | TodoState | number | {
+    payload: TodoState[] | TodoState | {
         id: number;
         data: TodoState
     };
